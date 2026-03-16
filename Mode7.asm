@@ -26,6 +26,9 @@
 ; DMA the tiles from bitmap_tiles into VRAM.
 ; Stretch the mode 7 plane vertically during HBlank to double the height.
 
+; Also I haven't tested this yet so :p
+; Check back in later when I do test it!
+
 ; Constants
 MAP_SIZE: = 512
 MAP_ROM_LOWER: = $380000
@@ -34,11 +37,11 @@ MODE7_WIDTH: = 128
 MODE7_HEIGHT: = 56
 
 ; Variables
-; bitmap_tiles.b    - Bitmap graphics buffer, to be DMA'd at VBlank when finished.
+; bitmap_tiles.b    - Bitmap graphics buffer, to be DMA'd at VBlank when finished. 7168 bytes.
 ; camera_x.w        - Camera info.
 ; camera_y.w
 ; camera_yaw.w
-; map_useupper.b	- Flag to use the upper 256kb of RAM bank for map data.
+; map_useupper.b	- Flag to use the upper 256kb of ROM bank for map data.
 
 Mode7_DrawFloor:
 		move    #$2700,sr                               ; Disable interrupts. This is a long task so we don't want to be disturbed.
