@@ -3,7 +3,7 @@ A Mode 7 styled floor renderer for the SEGA Mega Drive.
 
 ---
 
-https://img.shields.io/badge/Status-Complete-birghtgreen
+![Status](https://img.shields.io/badge/Status-Complete-birghtgreen)
 
 
 ![Preview](Preview.gif)
